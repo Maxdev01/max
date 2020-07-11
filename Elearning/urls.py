@@ -24,8 +24,8 @@ urlpatterns = [
     path('confidentialite/', views.confidentialite, name="confident" ),
     path('dash/', views.dashboard, name="dash"),
     path('donate/', views.donate, name="donation"),
-    path('nos-cours', views.cours, name="nos-cours"),
-    path('dev-cours', views.courss, name="dev-cours"),
+    path('nos-cours/', views.cours, name="nos-cours"),
+    path('dev-cours/', views.courss, name="dev-cours"),
     path('contact/', include('contact.urls')),
-    path('cours2', views.cours2, name="gestion-cours")
+    path('cours2/', views.cours2, name="gestion-cours"),
 ]

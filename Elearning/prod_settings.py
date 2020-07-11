@@ -1,8 +1,8 @@
-from Elearning.settings import *
+
 import django_heroku
 import dj_database_url
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
