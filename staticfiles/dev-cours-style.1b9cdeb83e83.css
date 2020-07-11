@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 95vh;
+}
+
+.side {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 8px;
+    overflow: auto;
+}
+
+.gauche {
+    width: 25%;
+    background: #f4f6ff;
+    color: rgb(27, 27, 27);
+}
+.gauche ul {
+    padding: 8px;
+    margin: 8px;
+}
+.gauche ul li {
+    padding: 6px;
+    margin: 6px;
+    animation: fadein 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    list-style: none;
+}
+
+/* design pour les link bien preciser avec :hover */
+.gauche ul li:hover {
+    background:rgb(200, 203, 221) ;
+}
+
+@keyframes fadein {
+    0%
+     {opacity: 0;
+    transform: rotate(-15deg) translateX(500px);
+    }
+    100% 
+    {opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+.droite {
+    width: 70%;
+    background: #f4f4f4;
+    box-shadow: 15px 10px 16px rgba(rgb(226, 215, 215), rgb(71, 173, 180), rgb(121, 121, 133), 0.1);
+}
+
+
+
+.head-left {
+    height: 50px;
+    background-color: rgb(200, 203, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgb(10, 49, 221);;
+}
+.head-left:hover {
+    box-shadow: 0 3px 6px rgba(73, 91, 141, 0.815);
+    color: rgb(25, 92, 180) ;
+}
+.head-left p {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.side .hid {
+    display: none;
+}
+
+/* pour la partie gauche bien preciser le button menu */
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    
+
+}
+
+.menu-btn__burger {
+    width: 25px;
+    height: 6px;
+    background: darkblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 6px;
+    background: darkblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/* animation du button menu */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* fin de la partie button */
+/* se sera util pour d'autre projet */
+

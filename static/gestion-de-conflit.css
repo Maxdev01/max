@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 95vh;
+}
+
+.general {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10p;
+    overflow: auto;
+    background-color: #ececec;
+}
+
+.right {
+    width: 75%;
+}
+
+.left {
+    width: 25%;
+    background: #f4f6ff;
+    color: rgb(27, 27, 27);
+}
+
+.hidden {
+    display: none;
+}
+
+.general ul li {
+    padding: 8px;
+    margin: 8px;
+    list-style: none;
+}
+
+.general ul li:hover {
+    background:rgb(200, 203, 221) ;
+    border-style: double;
+}
+
+::selection {
+    background-color:darkblue;
+    color: burlywood;
+}
+

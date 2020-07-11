@@ -1,0 +1,437 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.btn{
+   text-decoration: none;
+   font-weight: 500;
+   padding: 5px 16px;
+   line-height: 1.5;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   background: #53DE87;
+   font-size: inherit;
+   color: #fff;
+   margin-top: 12px;
+   
+}
+.btn:hover, .input:hover{
+   outline-color: #ccc;
+   
+}
+.input, .btn-large{
+   width: 100%;
+   height: 40px;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+   margin-top: 8px;
+   padding: 2px;
+   font-size: inherit;
+}
+.b-form{
+   background: #eee;
+   padding: 25px 5px;
+   border-radius: 7px;
+   margin: 0 5px;
+   font-family: serif;
+   font-size: 16px;
+}
+.b-form form{
+   margin-top: 20px;
+   padding: 10px;
+   box-shadow: 2px 2px 5px;
+}
+.b-form form label{
+   display: block;
+   font-weight: 500;
+   margin-top: 7px;
+}
+
+.navbar
+{
+	background: #111;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 23px;
+}
+.brand{
+	color: deepskyblue;
+	font-size: 23px;
+	font-family: cursive;
+	font-weight: 600;
+	text-decoration: none;
+}
+.nav ul{
+	display: flex;
+	list-style: none;
+}
+.nav li{
+	margin: 0;
+}
+.nav a{
+	text-decoration: none;
+	font-weight: 400;
+	padding: 13px 1rem;
+	color: green;
+}
+.nav a:hover{
+	color: #BBDBC6;
+	border-radius: 4px;
+}
+.center{
+	display: block;
+	width: 27%;
+	margin: 120px auto;
+}
+
+/* propriete pour animation @keyframe */
+
+
+
+
+
+
+@media (max-width: 768px)
+{
+	.navbar{
+		display: block;
+		min-height: 64px;
+		padding: 20px;
+	}
+	.brand{
+		float: left;
+	}
+	.bars
+	{	float: right;
+		cursor: pointer;
+		padding: 3px;
+	}
+	.bars span:nth-child(2){
+		background: #558199;
+		border-radius: 3px;
+	}
+	.bars span{
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 4px;
+		background: #ddd;
+	}
+	.nav {
+		display: none;
+		clear: both;
+		margin-top: 20px;
+	}
+	.nav-active{
+		display: block !important; 
+	}
+	.nav ul{
+		display: block;
+		border-top: 2px solid grey;
+		margin-top: 65px;
+		padding: 15px 0;
+	}
+	.nav li:nth-child(2){
+		border-top: 1px solid grey;
+	}
+	.nav a{
+		display: block;
+		padding: 5px 0;
+		transition: color 0.25s;
+	}
+}
+
+
+.footer{
+	margin-top: 30px;
+	background-color: #1B262c;
+	padding: 14px;
+	color: #f6f6f6;
+	font-size: 15px;
+}
+.footer .title{
+	font-size: 22px;
+	font-family: cursive;
+	font-weight: 200;
+}
+.footer .tel{
+	display: block;
+	text-decoration: underline;
+	font-weight: 300;
+	color: rgb(22, 73, 25);
+	font-size: 18px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.footer div > *{
+	padding: 8px
+}
+.text-center{
+	text-align: center;
+}
+.justify{
+	text-align: justify;
+}
+.last{
+	text-align-last: center;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-template-areas: "present form"	
+					     "testi testi";
+}
+.presentation{
+	grid-area: present;
+	padding: 12px;
+}
+.presentation .title{
+	font-size: 27px;
+	font-weight: 600;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding: 5px;
+	animation: up 1s;
+	animation-delay: 0.3;
+	animation-fill-mode: forwards;
+}
+
+@keyframes up {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes down {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.presentation .text{
+	font-size: 17px;
+	font-weight: 200;
+	font-family: serif;
+	color: #111;
+	padding: 20px 90px;
+	margin-top: 20px;
+	animation: down 1s;
+	animation-delay: 0.8s;
+	animation-fill-mode: forwards;
+}
+.form{
+	grid-area: form;
+	padding: 25px;
+}
+.card{
+    padding: 14px 20px 20px 2px;
+	width: 310px;
+	min-height: 220px;
+	margin: 35px 20px;
+	border-radius: 5px;
+	background-color: #CCC;
+	text-align: center;
+	text-align-last: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.card:hover {
+	box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+}
+
+.card .title{
+	font-size: 20px;
+	padding: 5px;
+	color: rgb(26, 84, 122);
+}
+.card .description{
+	margin: 30px 5px;
+	font-size: 18px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-style: oblique;
+}
+.card .author{
+	margin-top: 40px;
+	font-size: 14px;
+	text-align: right;
+	padding: 5px;
+}
+.card .author span{
+	color: rgb(41, 87, 57);
+}
+
+
+
+/* pour la nouvelle section testimonial */
+
+.testi {
+	height: 800px;
+	background-color: white;
+	grid-area: testi;
+	
+}
+
+.popup{
+	display: flex;
+	justify-content: space-between;
+	background-color: green;
+	padding: 10px;
+}
+.popup .close{
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+}
+
+/* pour la Ssection testimonials du site */
+.testimonials {
+	margin: 50px auto;
+	
+
+}
+
+.testimonials h1 {
+	text-align: center;
+	font-weight: bold;
+    color: #ff9800;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.testimonials h1::after {
+	content: '';
+	background-color: #ff9800;
+	display: block;
+	height: 3px;
+	width: 170px;
+	margin: 20px auto 5px;
+}
+
+.testimonanials .row {
+	margin-top: 30px;
+}
+
+.col-md-4 {
+	margin: 40px auto;
+
+}
+
+.profile {
+	padding: 70px 10px 10px;
+	height: auto;
+	width: 350px;
+	background-color: #efefef;
+	
+}
+
+
+
+.profile img {
+	height: 120px;
+	width: 120px;
+	top: -95px;
+	position: relative;
+	border: 10px solid white;
+	left: calc(-50% -50%);
+}
+
+.profile h3 {
+	font-size: 20px;
+	margin-top: 15px;
+	color: #ff9800;
+}
+
+span {
+	font-size: 12px;
+	color: #333;
+}
+
+blockquote {
+	font-size: 16px;
+	line-height: 30px;
+}
+/* pour le design qui se trouve au commence et la fin du texte */
+blockquote::before {
+	content: '\93';
+	font-size: 55px;
+	position: relative;
+	color: #ff9800;
+	line-height: 20px;
+	bottom: -15px;
+	right: 5px;
+}
+
+blockquote::after {
+	content: '\94';
+	font-size: 50px;
+	position: relative;
+	color: #ff9800;
+	line-height: 10px;
+	bottom: -15px;
+	left: 5px;
+}
+
+.profile:hover {
+	box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+}
+
+
+.user {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+/* ************ design pour la partie nos-cours.html *******  */
+#htr-border {
+	height: 550px;
+	background-color: rgba(227, 236, 236, 0.932);
+}
+
+#element-row {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	margin: 10px;
+}
+
+.element-column {
+	border: 1px solid rgb(147, 214, 223);
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	width: 300px;
+	padding: 20px;
+	margin: 20px;
+}
+
+.element-column #btn01 {
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+}
+
+.element-column:hover {
+	color: rgb(15, 11, 11);
+	background-color: rgb(245, 245, 245);
+	box-shadow: 2px 3px 5px rgb(185, 152, 152);
+}
+
+
+
+
+
+/* *************** fin de la design nos-cours.html ******* */
+
+
