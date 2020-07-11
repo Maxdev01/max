@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="b-form center">
+{% if form.errors %}
+   <p>Provide a valide username and password!</p>
+{% else %}
+   <p>Utiliser ce formulaire pour vous connecter, Merci!</p>
+{% endif %}
+<form method="post" action="{% url 'login' %}">
+   {{form.as_p}}
+   {% csrf_token %}
+   <input type="hidden" name="next" value="{% url 'home' %}">
+   <input class='btn' type="submit" value="Se connecter">
+</form>
+<p>Vous n'avez pas de compte, <a href="{% url 'register' %}">Creer un compte.</a></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Elearning - {% block title %} Welcome {% endblock %}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="{% static 'menu.css' %}">
+	  <script src="{% static 'jquery-3.5.1.js'%}"></script>
+	  <link rel="stylesheet" href="{% static 'dev-cours-style.css' %}">
+	  <link rel="stylesheet" href="{% static 'gestion-de-conflit.css'%}">
+   </head>
+   <body>
+   	<header class="navbar">
+   		<div class="brand">Elearning</div>
+   		<div class="bars" id="bars"><span></span><span></span><span></span></div>
+   		<nav class="nav" id="nav">
+   		  {% if request.user.is_authenticated %}
+   		  <ul>
+				   <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+				   <li><a href="{% url 'nos-cours' %}">Nos Cours</a></li>
+   				<li><a href="#">Compte</a></li>
+   		 		<li><a href="{% url 'logout' %}">Deconnection</a></li>
+   			</ul>
+   			{% else %}
+   			<ul>
+   				<li><a href="{% url 'home' %}">Accueil</a></li>
+				<li><a href="#">A propos</a></li>
+				<li><a href="{% url 'confident'%}">Confidentialite</a></li>
+				<li><a href="{% url 'donation'%}" >Don</a></li>
+				<li><a href="{% url 'login' %}">Connecter</a></li>
+					
+			</ul>
+			   
+   			{% endif %}
+   		</nav>
+   	</header>
+	<div style="clear:both;">
+    {% if messages %}
+      {% for message in messages %}
+      <div class="popup"> <p class="msg">{{ message }} </p><span class="close">X</span></div>
+      {% endfor %}
+    {% endif %}
+   </div>
+
+	
+	   
+	{% block content %} {% endblock %}
+	   
+	<footer class="footer">
+        <div class="text-center">
+            <h1 class="title">Idel E-LEARNING</h1>
+            <h4>&copy;Idel E-LEARNING, Haiti.All rights reverved.</h4>
+            <p><a class='tel' href="tel:31655866">Tel: 31 65 58 66</a></p>
+			<h4>Create by : MILIEN Maxime (MaxDev) <br>James DESTINEE</h4>
+			
+            <div class="logos"></div>
+
+        </div>
+    </footer>
+   	 
+   
+   
+      
+   </body>
+   <script src="{% static 'code.min.js' %}"></script>
+   <script src="{% static 'dev-cours-btn.js' %}"></script>
+   <script src="{% static 'dev-cours.js'%}"></script>
+   <script src="{% static 'gestion1.js'%}"></script>
+   <script src="{% static 'gestion-de-conflit.js'%}"></script>
+  
+</html>

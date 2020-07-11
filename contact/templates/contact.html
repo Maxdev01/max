@@ -1,0 +1,11 @@
+
+<div>
+   <div>
+      <h2>M'envoyer une message</h2>
+      <form action="{% url 'send_to_admin' %}" method="post">
+         {{ contactform.as_p }}
+         {% csrf_token %}
+         <p><input type="submit" value="Contacter" class="btn"></p>
+      </form>
+   </div>
+</div>

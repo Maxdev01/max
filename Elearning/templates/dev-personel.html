@@ -1,0 +1,134 @@
+{% extends "base.html"%}
+
+{%block content%}
+<div class="main">
+    <div class="side gauche" id="gch">
+        
+        <div class="head-left">
+            <p>DEVELOPEMENT PERSONEL</p>   
+        </div>
+     <div>
+        <!-- <h3>PRESENTATION DU COURS</h3> -->
+         <ul id="chapter">
+            <li id="first">MODULE 1 : Comment préparer sa journée ? </li>
+             <li class="lesson1 hide">Leçon 1 : Organiser sa journée.</li>
+             <li class="lesson2 hide">Leçon 2 : son temps (en établissant un chronogramme) ?</li>
+             <li class="lesson3 hide">Leçon 3 : comment se fixer des objectifs ?</li>
+             <li class="lesson4 hide">Leçon 4 : comment déterminer des horaires réguliers ?</li>
+             <li class="hide">Quiz</li>
+         </ul>
+
+         <ul id="chapter">
+             <li id="deuxieme">MODULE 2 : Comment rester  motivé quotidiennement?</li>
+             <li class="lesson5 hiden">Leçon 5 : Prenez des pauses régulièrement.</li>
+             <li class="lesson6 hiden">Leçon 6 : Faites un peu d’exercice</li>
+             <li class="lesson7 hiden">Leçon 7 : Soyez réaliste dans vos engagements</li>
+             <li class="lesson8 hiden">Leçon 8 : Lancez-vous</li>
+             <li class="hiden">Quiz</li>
+         </ul>
+         <div class="head-left">
+            <p><strong>DEVELOPEMENT PERSONEL NIVEAU 2</strong><p></p>
+        </div>
+         
+         <ul id="chapter">
+             <li id="four-time"><strong>Module 1. Le cerveau humain</strong></li>
+             <li class="lessons1 cacher"><strong>Leçon 1:</strong>qu’est-ce que c'est exactement ? </li>
+             <li class="lessons2 cacher"> <strong>Leçon 2:</strong>quel est le rôle du cerveau humain ? </li>
+             <li class="lessons3 cacher"><strong>Leçon 3:</strong>comment fonctionne le cerveau humain ?</li>
+             <li class="cacher">Questionnaire 1</li>
+         </ul>
+
+         <ul id="chapter">
+             <li id="five-time"><strong>Module 2. Structures du cerveau humain</strong></li>
+             <li class="lessons4 cacher2"><strong>Leçon 4 : </strong> quelles sont les structures du cerveau ?</li>
+             <li class="lessons5 cacher2"><strong>Leçon 5 :</strong>  quelles sont les composantes des structures du cerveau humain ?</li>
+             <li class="cacher2">Questionnaire 2</li>
+         </ul>
+
+         <ul id="chapter">
+             <li class="six-time"><strong>Module 3. Fonction des structures du cerveau humain</strong></li>
+             <li class="lessons6 cacher3"><strong>Leçon 6 :</strong>quelles sont les caractéristiques des hémisphères ?</li>
+             <li class="lessons7 cacher3"><strong>Leçon 7 :</strong>quelles sont les caractéristiques de la structure verticale ?</li>
+             <li class="caher3">Questionnaire 3</li>
+         </ul>
+
+         <ul id="chapter"> 
+             <li class="seven-time">Module 4. Choix d’une carrière et votre cerveau</li>
+             <li class="lessons8 cacher4"><strong>Leçon 8:</strong>c’est quoi l’apprentissage ?</li>
+             <li class="lessons9 cacher4"><strong>Leçon 9</strong>quels sont les processus d’apprentissage ?</li>
+             <li class="lessons10 cacher4"><strong>Leçon 10:</strong>quels sont  les étapes de l’apprentissage ?</li>
+             <li class="cacher4">Questionnaire 4</li>
+         </ul>
+
+         <ul id="chapter">
+             <li class="heigt-time"><strong>Module 5. Comprendre son choix professionnel</strong></li>
+             <li class="lessons11 cacher5"><strong>Leçon 11 :</strong>quelles sont les parties qui sont mobilisées dans les choix professionnels ?
+                Le langage
+                </li>
+             <li class="lesson12 cacher5"><strong>Leçon 12 :</strong></li>
+             <li class="cacher5">Questionnaire 5</li>
+         </ul>
+
+     </div>
+
+
+    </div>
+
+
+    <!-- Pour la partie droite qui changera auto si on click a droite -->
+    <div class="side droite">
+        <!-- Creation du bouton qui fermera la partie gauche-->
+        <div class="menu-btn" id="first-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        <div id="result">
+            <p>BIENVENU</p>
+        </div>
+
+
+        <div id="lesson1" class="hid correct text-center-left">
+            
+        </div>
+
+
+
+        <div id="lesson2" class="hid">2</div>
+
+         
+        <div id="lesson3" class="hid">3</div>
+
+
+        
+
+        <div id="lesson4" class="hid">4</div>
+
+        
+
+        <div id="lesson5" class="hid">
+            5
+        </div>
+
+        <div class="lesson6" class="hid">
+            
+        </div>
+
+        <div id="lesson7" class="hid">
+
+        </div>
+
+        <div id="lesson8" class="hid">
+            8
+        </div>
+
+        <!-- COURS DEVELOPEMENT PERSO NIVEAU 2-->
+        <!-- DEXIEME PARTIE DU COURS-->
+
+        <div id="lessons1" class="hid"><h1>NEW HIT</h1></div>
+
+
+    
+    </div>
+    
+</div>
+{% include 'contact2.html' %}
+{%endblock content%}

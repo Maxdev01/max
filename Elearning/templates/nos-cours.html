@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+
+{%block content%}
+
+<section id="htr-border">
+    <div id="element-row">
+        <div class="element-column">
+            <h3>GESTION DE CONFLIT</h3>
+             <p><strong>temps: 2h:30min Maximun</strong></p>
+            <p><a href="{% url 'dev-cours'%}" class="btn" id="btn01">COMMENCER</a> </p>
+        </div>
+
+        <div class="element-column">
+            <h3>Gestion De Conflit</h3>
+            <p><strong>temps: 3h:30mn Maximun</strong></p>
+            <p><a href="{% url 'gestion-cours'%}" class="btn">COMMENCER</a> </p>
+        </div>
+
+        
+    </div>
+</section>
+  
+{%endblock%}

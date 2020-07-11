@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<br><br>
+
+<div class="grid">
+   <section class="presentation">
+      <h1 class="title text-center">Idel E-Learning & Coaching</h1>
+
+      <p class="text justify last">Institut de Développement personnel, d'entrepreneuriat <br> et de Leadership (IDEL) est une entreprise
+         sociale qui offre des formations en ligne (e-Learning) dans <br> les domaines du développement personnel de
+          l'entreprenariat et de leadership IDEL  offre également un programme de <br> coaching et d'orientation</p>
+
+      <div>
+         {% for course in courses %}
+            <div class="card">
+
+               <h2 class="title">{{ course.title }}</h2>
+
+               <p class="description">{{ course.description }}</p>
+               <h4 class="author">Created by : {{ course.author }} - 
+                  {% if course.price == 0 %}
+                     <span>Free</span>
+                  {% else %}
+                     <span>{{ course.price }}$</span>
+                  {% endif %}
+
+               </h4>
+            </div>
+
+         {% empty %}
+            <p>There 's no courses</p>
+         {% endfor %}
+
+      </div>
+
+   </section>
+
+   <!-- formulaire d'inscription -->
+   <section class="form b-form">
+      <form action="{% url 'home' %}" method="POST">
+         {{form.as_p}}
+         {% csrf_token %}
+         <input class="btn btn-large" type="submit" value="Inscrire maintenant">
+      </form>
+
+   </section>
+
+   <!-- """"Partie testimonials du site-->
+   <!-- """" les gens qui font partie de idel-->
+ <section class="testi">
+   <section class="testimonials">
+      <div class="container">
+         <h1>testimonials</h1>
+         <p class="text-center">Subscribe Easy tutorials Channek to watch more videos</p>
+         <div class="row">
+            
+            <div class="col-md-4 text-center">
+               <div class="profile">
+                  <img src="{% static 'img1.jpg' %}" alt="mon image" class="user">
+                  <blockquote>
+                     like this vide and ask your  question in commentsection. Don't forget to subcribe Easy tutorial chanel to watch more videos of website dessigng, digital market andr photoshop.
+                  </blockquote>
+                  <h3>MAXIME MILIEN <span> Co-founder at IDEL</span> </h3>
+               </div>
+            </div>
+
+             <div class="col-md-4 text-center">
+               <div class="profile">
+                  <img src="{% static 'img1.jpg' %}" alt="mon image" class="user">
+                  <blockquote>
+                     like this vide and ask your question in commentsection. Don't forget to subcribe Easy tutorial chanel to watch more videos of website dessigng, digital market and photoshop.
+                  </blockquote>
+                  <h3>MAXIME MILIEN <span> Co-founder at IDEL</span> </h3>
+               </div>
+            </div>
+
+             <div class="col-md-4 text-center">
+               <div class="profile">
+                  <img src="{% static 'img1.jpg' %}" alt="mon image" class="user">
+                  <blockquote>
+                     like this vide and ask your question in commentsection. Don't forget to subcribe Easy tutorial chanel to watch more videos of website dessigng, digital market and photoshop.
+                  </blockquote>
+                  <h3>MAXIME MILIEN <span> Co-founder at IDEL</span> </h3>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+    
+ </section>
+ {% include 'contact.html' %}
+</div>
+
+{% endblock %}

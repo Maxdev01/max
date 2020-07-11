@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="main grid">
+   <section class="presentation">
+      <h1 class="title text-center">Idel E-Learning & Coaching</h1>
+
+      <p class="text justify last">Institut de Développement personnel, d'entrepreneuriat et de Leadership (IDEL) est une entreprise
+         sociale qui offre des formations en ligne (e-Learning) dans les domaines du développement personnel de
+          l'entreprenariat et de leadership IDEL  offre également un programme de coaching et d'orientation</p>
+
+   </section>
+   <section class="form b-form">
+      <form action="{% url 'register' %}" method="POST">
+         {{form.as_p}}
+         {% csrf_token %}
+         <input class="input" type="submit" value="Inscrire maintenant">
+      </form>
+
+   </section>
+<section class="testi">
+<h1>maxime</h1>
+</section>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+
+<div>
+    <div>
+       <h2>M'envoyer une message</h2>
+       <form action="{% url 'send_to_email' %}" method="post">
+           <textarea name="message" id="" cols="10" rows="16" class="input"></textarea>
+          {% csrf_token %}
+          <p style="display: inline-block; vertical-align: top"><input type="submit" value="Contacter" class="btn"></p>
+       </form>
+    </div>
+ </div>

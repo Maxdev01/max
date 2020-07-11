@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}register{% endblock %}
+
+{% block content %}
+{% if valid %}
+   <h3>Successfulled</h3>
+{% endif %}
+<div class="b-form center">
+{% if form.errors %}
+   <p>Provide valide inputs, please</p>
+{% else %}
+   <p>Please, Sign Up.</p>
+{% endif %}
+<p>{{ form.errors }}</p>
+
+<form method="post" action="{% url 'register' %}">
+   {{form.as_p}}
+   {% csrf_token %}
+   <input class='btn' type="submit" value="S'inscrire">
+</form>
+</div>
+{% endblock %}
