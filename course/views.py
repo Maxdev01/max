@@ -5,7 +5,7 @@ from django.contrib import messages
 from contact.forms import ContactForm
 
 def home(request):
-    #courses = Courses.objects.all()
+    courses = Courses.objects.all()
 
     if request.method == 'POST':
         form = RegisterForm(request.POST)
