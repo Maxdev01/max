@@ -141,3 +141,22 @@
 /* fin de la partie button */
 /* se sera util pour d'autre projet */
 
+
+@media (max-width: 768px) {
+    #gch {
+        width: 90%;
+    }
+    #drt{
+        width: 100% !important;
+    }
+}
+
+
+@media (max-width: 1554px) {
+    #gch {
+        width: 90%;
+    }
+    #drt{
+        width: 100% !important;
+    }
+}

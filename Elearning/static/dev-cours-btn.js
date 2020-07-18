@@ -17,4 +17,3 @@ for(var i of li){
         document.getElementById('result').innerHTML = content;
     });
 }
-

@@ -41,7 +41,7 @@ body {
 }
 
 .general ul li:hover {
-    background:rgb(200, 203, 221) ;
+    background: rgb(175, 160, 160);
     border-style: double;
 }
 
@@ -50,3 +50,17 @@ body {
     color: burlywood;
 }
 
+
+
+.btn3 {
+    text-decoration: none;
+   font-weight: 500;
+   padding: 5px 16px;
+   line-height: 1.5;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   background: #53DE87;
+   font-size: inherit;
+   color: rgb(189, 28, 28);
+   margin-top: 12px;
+}
