@@ -108,7 +108,6 @@
 }
 .footer .title{
 	font-size: 22px;
-	font-family: cursive;
 	font-weight: 200;
 }
 .footer .tel{
@@ -271,16 +270,18 @@
 	padding: 70px 10px 10px;
 	height: auto;
 	width: 350px;
-	background-color: #efefef;
+	background-color: white;
 	border-radius: 6px;
+	box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+
 }
 
 .profile img {
-	height: 120px;
-	width: 120px;
+	height: 125px;
+	width: 125px;
 	top: -95px;
 	position: relative;
-	border: 10px solid white;
+	border: 8px solid white;
 	left: calc(-50% -50%);
 }
 
@@ -291,33 +292,17 @@
 }
 
 span {
-	font-size: 12px;
+	font-size: 16px;
 	color: #333;
 }
 
 blockquote {
 	font-size: 16px;
 	line-height: 30px;
+	font-family: sans-serif;
 }
 /* pour le design qui se trouve au mence et la fin du texte */
-blockquote::before {
-	content: '\93';
-	font-size: 55px;
-	position: relative;
-	color: #ff9800;
-	line-height: 20px;
-	bottom: -15px;
-	right: 5px;
-}
-blockquote::after {
-	content: '\94';
-	font-size: 50px;
-	position: relative;
-	color: #ff9800;
-	line-height: 10px;
-	bottom: -15px;
-	left: 5px;
-}
+
 
 .profile:hover {
 	box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);

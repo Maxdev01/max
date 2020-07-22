@@ -20,3 +20,6 @@ def courss(request):
 """ voici le view du cours de gestion de conflit """
 def cours2(request):
 	return render(request, "cours-gestion-de-conflit.html")
+
+def service(request):
+    return render(request, "service.html")

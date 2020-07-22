@@ -28,4 +28,5 @@ urlpatterns = [
     path('dev-cours/', views.courss, name="dev-cours"),
     path('contact/', include('contact.urls')),
     path('cours2/', views.cours2, name="gestion-cours"),
+    path('service/', views.service, name="service")
 ]
