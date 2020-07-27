@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Red Rose', cursive;
+	font-family: "open sans" sans-sherif;
 }
 
 .btn{
@@ -321,8 +321,11 @@ blockquote {
 }
 
 /* ************ design pour la partie nos-cours.html *******  */
+/* ############### A modifier a chaque besion #########   */ 
 #htr-border {
 	height: 550px;
+	background: #0c7b93;
+	color: #f4f7f7;
 }
 
 #element-row {
@@ -338,8 +341,8 @@ blockquote {
 	border: 1px solid rgb(147, 214, 223);
 	display: flex;
 	flex-direction: column;
-	height: 200px;
-	width: 300px;
+	height: auto;
+	width: 380px;
 	padding: 20px;
 	margin: 20px;
 }
@@ -353,6 +356,31 @@ blockquote {
 	color: rgb(15, 11, 11);
 	background-color: rgb(245, 245, 245);
 	box-shadow: 2px 3px 5px rgb(185, 152, 152);
+}
+
+#htr-border .content-img 
+{
+	height: 290px;
+	width: 350px;
+}
+
+#btn-design {
+	text-decoration: none;
+   font-weight: 700;
+   padding: 12px 25px;
+   line-height: 1.5;
+   border: 1px solid transparent;
+   border-radius: 7px;
+   background: #1f4e5f;
+   font-size: inherit;
+   color: #fff;
+   margin-top: 12px;
+}
+
+#btn-design:hover
+{
+  background: #3498db;
+  color: #ecf0f1;
 }
 
 
@@ -474,4 +502,16 @@ blockquote {
 	#element-row {
 		flex-direction: column;
 	}
+	.element-column {
+		height: auto;
+		width: auto;
+	}
+
+	#htr-border .content-img {
+		width: 250px;
+		height: 250px;
+	}
+	#htr-border {
+	height: auto;
+}
 }

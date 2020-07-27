@@ -1,4 +1,6 @@
+
 {% extends "base.html"%}
+{% load static %}
 
 {%block content%}
 
@@ -6,16 +8,29 @@
     <div id="element-row">
         <div class="element-column">
             <h3>DEVELOPEMENT PERSONEL </h3>
-             <p style="margin-bottom: 20px; padding-bottom: 25px;"><strong>temps: 2h:30min Maximun</strong></p>
+            <p>En fait, confinement veut dire tout simplement « emprisonnement,
+             isolement ou quarantaine ». La grande question qu’on se pose maintenant :
+              Comment gérer cette période de confinement ? </p>
+              <div>
+              <p>  <img style="margin-bottom: 20px; padding-bottom: 25px;"
+               src="{% static 'dp.jpg' %}" alt="image corespond au developement personel" class="content-img"> </p>
+               </div>
+             
              <div>
-            <p><a href="{% url 'dev-cours'%}" class="btn">COMMENCER</a> </p>
+            <p><a href="{% url 'dev-cours'%}" id="btn-design">COMMENCER</a> </p>
             </div>
         </div>
 
         <div class="element-column">
             <h3>GESTION DE CONFLIT</h3>
-            <p style="margin-bottom: 20px; padding-bottom: 25px;"><strong>temps: 3h:30mn Maximun</strong></p>
-            <p><a href="{% url 'gestion-cours'%}" class="btn">COMMENCER</a> </p>
+            <p> Ce cours intitulé "conflit “. Comment les prévenir, les gérer et les résoudre ?
+                 Est conçu dans le but de permettre au grand public d'acquérir des connaissances sur
+                  ce que c'est un conflit  </p>
+                  <div>
+              <p>  <img style="margin-bottom: 20px; padding-bottom: 25px;"
+               src="{% static 'gdc.png' %}" alt="image corespond au gestion de conflit" class="content-img"> </p>
+               </div>
+            <p><a href="{% url 'gestion-cours'%}" id="btn-design">COMMENCER</a> </p>
         </div>
 
         
