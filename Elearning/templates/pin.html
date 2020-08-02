@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+<form method="POST">
+    <input type="text" placeholder="votre PIN d'activativation" name="PIN">
+    {% csrf_token %}
+    <button type="submit">Validation</button> 
+</form>
+
+{% endblock %}
+

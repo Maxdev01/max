@@ -10,8 +10,7 @@ def donate(request):
     return render(request, "donate.html")
 
 
-def cours(request):
-    return render(request, "nos-cours.html")
+
 
 """ voici le views des cours de developement personel """ 
 def courss(request):

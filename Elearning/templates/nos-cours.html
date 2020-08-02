@@ -6,7 +6,28 @@
 
 <section id="htr-border">
     <div id="element-row">
+
+        {% for i in cours %}
         <div class="element-column">
+            <h3>{{ i.title }}</h3>
+            <p>{{ i.description }}</p>
+
+            <!-- <p><img src="{{ i.image.url }}" alt="{{ i.title }}"></p> -->
+            <div>
+                <p><a href="{% if i.user == request.user and i.active %} {% url 'dev-cours' %} {% else %} {% url 'pin' i.id %} {% endif %}">
+                    <!-- {% if i.students == request.user and i.active %}Commenser{% else %}Acheter ce cours{% endif %}</a></p> -->
+                    {% with ok=request.user.myuser.get.course.all %}
+                    {{ ok }}
+                        {% if ok.active %}Commenser{% else %}Acheter ce cours{% endif %}</a></p>
+
+
+                    {% endwith %}
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <!-- <div class="element-column">
             <h3>DEVELOPEMENT PERSONEL </h3>
             <p>En fait, confinement veut dire tout simplement « emprisonnement,
              isolement ou quarantaine ». La grande question qu’on se pose maintenant :
@@ -31,7 +52,7 @@
                src="{% static 'gdc.png' %}" alt="image corespond au gestion de conflit" class="content-img"> </p>
                </div>
             <p><a href="{% url 'gestion-cours'%}" id="btn-design">COMMENCER</a> </p>
-        </div>
+        </div> -->
 
         
     </div>

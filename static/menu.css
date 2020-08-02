@@ -55,7 +55,7 @@
 .navbar
 {
 	width: 100%;
-	background: #111;
+	background: #EBECF1;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -141,6 +141,10 @@
 	width: 100%;
 	grid-area: present;
 	padding: 12px;
+	background-color: #ffffff;
+	color: rgb(26, 84, 122);
+	box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+	
 }
 .presentation .title{
 	font-size: 26px;
@@ -185,7 +189,7 @@
 	min-height: 220px;
 	margin: 35px 20px;
 	border-radius: 5px;
-	background-color: #CCC;
+	background-color: #EBECF1;
 	text-align: center;
 	text-align-last: center;
 	display: inline-block;
@@ -385,6 +389,11 @@ blockquote {
 
 
 /* ----------------------- Mobiles ---------------------*/
+/* cette partie est responsable de la responsivite */
+/* ################ cette partie est non modifiable ##########  */
+
+
+
 
 @media (max-width: 768px)
 {
