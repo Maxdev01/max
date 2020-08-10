@@ -6,7 +6,6 @@ from contact.forms import ContactForm
 
 def home(request):
     courses = Courses.objects.all()
-
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         contactform = ContactForm(request.POST)
@@ -41,7 +40,10 @@ def activatePIN(request, id=None):
                 student.course.add(cours)
                 student.save()
                 pin.save()
-
-                print(' okokokokok ')
-                return redirect('nos-cours')
+            else:
+                messages.error(request, 'Pin invalide')
+            return redirect('nos-cours')
+            # else:
+            #     #template
+            #     pass
     return render(request, 'pin.html', {})

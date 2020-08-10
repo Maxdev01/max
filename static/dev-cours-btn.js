@@ -26,9 +26,6 @@ Btn3.addEventListener('click', function() {
 
 });
 
-Quizz1.addEventListener('click', function() {
-    alert('Nos quizz serons bientot disponible');
-});
 
 
 

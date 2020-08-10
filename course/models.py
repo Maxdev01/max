@@ -7,7 +7,7 @@ class Courses(models.Model):
     author = models.CharField(max_length=50)
     price = models.IntegerField()
     time = models.TimeField(null=True, blank=True)
-    url = models.URLField(null=True, blank=True)
+    url = models.CharField(null=True, blank=True, max_length=15)
     # image = models.ImageField(null=True, blank=True)
     active = models.BooleanField(default=False)
 
@@ -17,7 +17,7 @@ class Courses(models.Model):
         return self.title
 class Students(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='myuser')
-    course = models.ManyToManyField(Courses, null=True, blank=True, related_name='mescours')
+    course = models.ManyToManyField(Courses, blank=True, related_name='mescours')
 
     def __str__(self):
         return self.user.first_name

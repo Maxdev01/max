@@ -11,17 +11,19 @@
         <div class="element-column">
             <h3>{{ i.title }}</h3>
             <p>{{ i.description }}</p>
-
             <!-- <p><img src="{{ i.image.url }}" alt="{{ i.title }}"></p> -->
             <div>
-                <p><a href="{% if i.user == request.user and i.active %} {% url 'dev-cours' %} {% else %} {% url 'pin' i.id %} {% endif %}">
-                    <!-- {% if i.students == request.user and i.active %}Commenser{% else %}Acheter ce cours{% endif %}</a></p> -->
-                    {% with ok=request.user.myuser.get.course.all %}
-                    {{ ok }}
-                        {% if ok.active %}Commenser{% else %}Acheter ce cours{% endif %}</a></p>
+                <p>
+                    
+                    {% with lien=i.url ok=request.user.myuser.get.course.all %}
 
-
+                    {% for c in ok %}
+                    <a href="{% if c.active and i.id == c.id %}{{lien}}{% else %} {% url 'pin' i.id %} {% endif %}">
+                        {% if c.active and i.id == c.id %}Commenser{% else %}Acheter ce cours{% endif %}</a></p>
+                    {% endfor %}
+        
                     {% endwith %}
+                    
             </div>
 
         </div>

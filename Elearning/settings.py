@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Elearning.urls'
-
+"""
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -70,6 +70,7 @@ TEMPLATES = [
         },
     },
 ]
+"""
 
 WSGI_APPLICATION = 'Elearning.wsgi.application'
 
@@ -133,7 +134,7 @@ import django_heroku
 import dj_database_url
 
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -147,7 +148,7 @@ DATABASES = {
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)  
-"""
+
 
 
 django_heroku.settings(locals())

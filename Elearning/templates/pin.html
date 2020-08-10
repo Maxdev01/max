@@ -2,11 +2,21 @@
 
 {% block content %}
  
-<form method="POST">
-    <input type="text" placeholder="votre PIN d'activativation" name="PIN">
+<form method="POST" id="design-pin">
+    <input type="text" placeholder="votre PIN d'activativation" name="PIN"> <br>
     {% csrf_token %}
-    <button type="submit">Validation</button> 
+    <button type="submit" id="btn-design">Validation</button>
 </form>
+
+<div class="pin-ds">
+    <p>Apres avoir payer par l'un des moyen ci-dessous vous allez recevour un email</p>
+    <p>Pour le moment nous 3 moyen de de payment</p>
+    <strong>MON CASH</strong>
+    <div class="mon-cash-ds">
+    <p>Numero : (+509) 37884517</p>
+    <p>Nom: seth REMY</p>
+    </div>
+</div>
 
 {% endblock %}
 

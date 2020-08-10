@@ -21,11 +21,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('course.urls')),
     path('account/', include('account.urls')),
+    path('content/', include('content.urls')),
     path('confidentialite/', views.confidentialite, name="confident" ),
     path('dash/', views.dashboard, name="dash"),
     path('donate/', views.donate, name="donation"),
-    path('dev-cours/', views.courss, name="dev-cours"),
+    path('nos-cours/dev-cours/', views.courss, name="dev-cours"),
     path('contact/', include('contact.urls')),
-    path('cours2/', views.cours2, name="gestion-cours"),
-    path('service/', views.service, name="service")
+    path('nos-cours/gestion-cours/', views.cours2, name="gestion-cours"),
+    path('service/', views.service, name="service"),
 ]

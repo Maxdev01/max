@@ -93,9 +93,36 @@
     background: linear-gradient(#aac1c7,#e4f9ff 50%, #fff 50%, #fff 100%);
 }
 
+#design-pin {
+    margin: 15px;
+    padding: 10px;
+}
+
+#design-pin input {
+    margin: 10px;
+    padding: 15px;
+    background: rgb(219, 219, 230);
+    width: 450px;
+    height: 80px;
+}
 
 
+.pin-ds {
+    margin: 4px;
+    padding: 3px;
+}
 
+.pin-ds p {
+ font-size: 18px;
+}
+
+.mon-cash-ds {
+    background: red;
+    width: 30%;
+    color: white;
+    margin: 4px;
+    padding: 5px;
+}
 
 
 
