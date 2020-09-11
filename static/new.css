@@ -124,5 +124,27 @@
     padding: 5px;
 }
 
+/* about IDEL */
+
+.about-idel {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 80px;
+    margin: 8px;
+    background: #dde5f1;
+}
+
+.about-idel p {
+    font-size: 17px;
+}
+
+/*  $$$$$$$$$$$$$$ FIN ABOUT IDEL $$$$$$$$$$$$$$ */
+
+
+
+.font-p {
+    font-size: 18px;
+}
 
 

@@ -29,4 +29,5 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('nos-cours/gestion-cours/', views.cours2, name="gestion-cours"),
     path('service/', views.service, name="service"),
+    path('about/' , views.about, name='about-idel'),
 ]
